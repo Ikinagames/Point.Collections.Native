@@ -34,7 +34,7 @@ namespace Point {
 			float3 mul(const float3 x, const int y);
 			float3 mul(const float3 x, const float y);
 
-			bool contains(aabb _aabb, float3 position);
+			bool contains(const aabb _aabb, const float3 position);
 		}
 	}
 }

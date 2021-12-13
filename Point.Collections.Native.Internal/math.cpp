@@ -19,19 +19,6 @@
 namespace Point {
     namespace Collections {
         namespace Math {
-            bool contains(Collections::aabb _aabb, Collections::float3 position) 
-            {
-                float3 
-                    min = AABB_MIN(_aabb),
-                    max = AABB_MAX(_aabb);
-
-                return position.x >= min.x
-                    && position.y >= min.y
-                    && position.z >= min.z
-                    && position.x < max.x
-                    && position.y < max.y
-                    && position.z < max.z;
-            }
             float3 add(const float3 x, const int y)
             {
                 float3 output = x;
@@ -86,6 +73,20 @@ namespace Point {
                 output.z -= y.z;
 
                 return output;
+            }
+
+            bool contains(const Collections::aabb _aabb, const Collections::float3 position)
+            {
+                float3
+                    min = AABB_MIN(_aabb),
+                    max = AABB_MAX(_aabb);
+
+                return position.x >= min.x
+                    && position.y >= min.y
+                    && position.z >= min.z
+                    && position.x < max.x
+                    && position.y < max.y
+                    && position.z < max.z;
             }
         }
     }
