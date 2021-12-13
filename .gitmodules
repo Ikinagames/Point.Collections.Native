@@ -1,3 +1,6 @@
 [submodule "Unity.Mathematics"]
 	path = Unity.Mathematics
 	url = https://github.com/Unity-Technologies/Unity.Mathematics.git
+[submodule "com.unity.collections"]
+	path = com.unity.collections
+	url = https://github.com/needle-mirror/com.unity.collections.git
