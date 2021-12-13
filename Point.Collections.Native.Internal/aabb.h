@@ -25,7 +25,7 @@ namespace Point {
 #define AABB_MIN(_aabb) Math::sub(_aabb.center, _aabb.extents)
 #define AABB_MAX(_aabb) Math::add(_aabb.center, _aabb.extents)
 
-		WIN32_DLL_UNMANAGED_API struct aabb
+		DLLEXPORT struct aabb
 		{
 			float3 center;
 			float3 extents;

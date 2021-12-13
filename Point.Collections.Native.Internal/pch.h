@@ -16,4 +16,4 @@
 
 #endif //PCH_H
 
-#define WIN32_DLL_UNMANAGED_API extern "C" _declspec(dllexport)
+#define DLLEXPORT extern "C" _declspec(dllexport)
