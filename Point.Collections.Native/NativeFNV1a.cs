@@ -16,16 +16,16 @@ using System.Runtime.InteropServices;
 
 namespace Point.Collections.Native
 {
-    public static class InternalFNV1a
+    public static class NativeFNV1a
     {
         [DllImport("Point.Collections.Native.Internal")]
-        private static unsafe extern void fnv1a32_str([MarshalAs(UnmanagedType.LPWStr)] string str, uint* output);
+        public static unsafe extern void fnv1a32_str([MarshalAs(UnmanagedType.LPWStr)] string str, uint* output);
         [DllImport("Point.Collections.Native.Internal")]
-        private static unsafe extern void fnv1a32_byte(byte* buffer, int* length, uint* output);
+        public static unsafe extern void fnv1a32_byte(byte* buffer, int* length, uint* output);
 
         [DllImport("Point.Collections.Native.Internal")]
-        private static unsafe extern void fnv1a64_str([MarshalAs(UnmanagedType.LPWStr)] string str, ulong* output);
+        public static unsafe extern void fnv1a64_str([MarshalAs(UnmanagedType.LPWStr)] string str, ulong* output);
         [DllImport("Point.Collections.Native.Internal")]
-        private static unsafe extern void fnv1a64_byte(byte* buffer, int* length, ulong* output);
+        public static unsafe extern void fnv1a64_byte(byte* buffer, int* length, ulong* output);
     }
 }

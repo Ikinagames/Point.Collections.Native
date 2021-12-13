@@ -45,10 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CLSSingleTone.cs" />
-    <Compile Include="InternalFNV1a.cs" />
-    <Compile Include="IValidation.cs" />
-    <Compile Include="Plane.cs" />
+    <Compile Include="NativeFNV1a.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypeHelper.cs" />
   </ItemGroup>
