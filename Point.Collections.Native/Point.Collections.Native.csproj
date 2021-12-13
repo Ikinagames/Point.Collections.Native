@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\..\Program Files\Unity\2020.3.24f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +58,7 @@
     <ProjectReference Include="..\Unity.Mathematics\src\Unity.Mathematics\Unity.Mathematics.csproj">
       <Project>{19810344-7387-4155-935f-bdd5cc61f0bf}</Project>
       <Name>Unity.Mathematics</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
