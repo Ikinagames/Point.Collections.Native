@@ -9,7 +9,10 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
+#include "math.h"
 #include "fnv1a.h"
+#include "aabb.h"
+#include "float.h"
 
 #endif //PCH_H
 
