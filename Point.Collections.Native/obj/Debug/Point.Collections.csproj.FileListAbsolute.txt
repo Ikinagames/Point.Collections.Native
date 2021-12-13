@@ -1,9 +1,0 @@
-E:\Syadeu\Unity\PointFramework\Point.Collections\Point.Collections\obj\Debug\Point.Collections.csproj.AssemblyReference.cache
-E:\Syadeu\Unity\PointFramework\Point.Collections\Point.Collections\obj\Debug\Point.Collections.csproj.CoreCompileInputs.cache
-E:\Syadeu\Unity\PointFramework\Point.Collections\Point.Collections\bin\Debug\Point.Collections.dll
-E:\Syadeu\Unity\PointFramework\Point.Collections\Point.Collections\bin\Debug\Point.Collections.pdb
-E:\Syadeu\Unity\PointFramework\Point.Collections\Point.Collections\bin\Debug\Unity.Mathematics.dll
-E:\Syadeu\Unity\PointFramework\Point.Collections\Point.Collections\bin\Debug\Unity.Mathematics.pdb
-E:\Syadeu\Unity\PointFramework\Point.Collections\Point.Collections\obj\Debug\Point.Collections.csproj.CopyComplete
-E:\Syadeu\Unity\PointFramework\Point.Collections\Point.Collections\obj\Debug\Point.Collections.dll
-E:\Syadeu\Unity\PointFramework\Point.Collections\Point.Collections\obj\Debug\Point.Collections.pdb
