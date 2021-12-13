@@ -16,22 +16,22 @@ using System;
 
 namespace Point.Collections
 {
-    public abstract class CLSSingleTone<T> : IDisposable where T : class, new()
-    {
-        private static T s_Instance;
-        public static T Instance
-        {
-            get
-            {
-                if (s_Instance == null) s_Instance = new T();
-                return s_Instance;
-            }
-        }
-        ~CLSSingleTone()
-        {
-            Dispose();
-        }
+    //public abstract class CLSSingleTone<T> : IDisposable where T : class, new()
+    //{
+    //    private static T s_Instance;
+    //    public static T Instance
+    //    {
+    //        get
+    //        {
+    //            if (s_Instance == null) s_Instance = new T();
+    //            return s_Instance;
+    //        }
+    //    }
+    //    ~CLSSingleTone()
+    //    {
+    //        Dispose();
+    //    }
 
-        public virtual void Dispose() { }
-    }
+    //    public virtual void Dispose() { }
+    //}
 }

@@ -18,7 +18,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-namespace Point.Collections
+namespace Point.Collections.Native
 {
     public sealed class TypeHelper
     {

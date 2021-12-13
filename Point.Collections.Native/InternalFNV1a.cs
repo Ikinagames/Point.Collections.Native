@@ -14,9 +14,9 @@
 
 using System.Runtime.InteropServices;
 
-namespace Point.Collections
+namespace Point.Collections.Native
 {
-    public static class FNV1a
+    public static class InternalFNV1a
     {
         [DllImport("Point.Collections.Native.Internal")]
         private static unsafe extern void fnv1a32_str([MarshalAs(UnmanagedType.LPWStr)] string str, uint* output);
