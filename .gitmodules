@@ -1,0 +1,3 @@
+[submodule "Unity.Mathematics"]
+	path = Unity.Mathematics
+	url = https://github.com/Unity-Technologies/Unity.Mathematics.git
