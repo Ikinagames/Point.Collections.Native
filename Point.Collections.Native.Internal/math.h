@@ -14,13 +14,27 @@
 
 #pragma once
 
+#include "pch.h"
 #include "float.h"
-
-#define WIN32_DLL_UNMANGLED_API extern "C" _declspec(dllexport)
+#include "aabb.h"
 
 namespace Point {
 	namespace Collections {
-		WIN32_DLL_UNMANGLED_API void vector_normalize(float3* input, float3* output);
-		WIN32_DLL_UNMANGLED_API void vector_dot(float3* input, float3* output);
+		namespace Math {
+			float3 add(const float3 x, const int y);
+			float3 add(const float3 x, const float y);
+			float3 add(const float3 x, const float3 y);
+			/// <summary>
+			/// - operator
+			/// </summary>
+			float3 sub(const float3 x, const int y);
+			float3 sub(const float3 x, const float y);
+			float3 sub(const float3 x, const float3 y);
+
+			float3 mul(const float3 x, const int y);
+			float3 mul(const float3 x, const float y);
+
+			//bool contains(Collections::aabb* _aabb, Collections::float3* position);
+		}
 	}
 }

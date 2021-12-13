@@ -4,18 +4,18 @@
 
 namespace Point {
 	namespace Collections {
-		WIN32_DLL_UNMANGLED_API struct float2
+		WIN32_DLL_UNMANAGED_API struct float2
 		{
 			float x;
 			float y;
 		};
-		WIN32_DLL_UNMANGLED_API struct float3
+		WIN32_DLL_UNMANAGED_API struct float3
 		{
 			float x;
 			float y;
 			float z;
 		};
-		WIN32_DLL_UNMANGLED_API struct float4
+		WIN32_DLL_UNMANAGED_API struct float4
 		{
 			float x;
 			float y;
