@@ -13,3 +13,81 @@
 // limitations under the License.
 
 #include "pch.h"
+#include "fnv1a.h"
+
+namespace Point {
+	namespace Collections {
+		const unsigned int kPrime32 = 16777619;
+		const unsigned long kPrime64 = 1099511628211LU;
+		const unsigned int kOffsetBasis32 = 2166136261U;
+		const unsigned long kOffsetBasis64 = 14695981039346656037LU;
+
+		void fnv1a32_str(char* str, UINT* output) {
+			if (str == nullptr) {
+				*output = kOffsetBasis32;
+				return;
+			}
+
+			unsigned int hash = kOffsetBasis32;
+			int length = strlen(str);
+
+			for (int i = 0; i < length; i++)
+			{
+				hash *= kPrime32;
+				hash ^= (unsigned int)str[i];
+			}
+
+			*output = hash;
+		}
+		void fnv1a32_byte(BYTE* buffer, int* length, UINT* output) {
+			if (buffer == nullptr) {
+				*output = kOffsetBasis32;
+				return;
+			}
+
+			unsigned int hash = kOffsetBasis32;
+
+			for (int i = 0; i < *length; i++)
+			{
+				hash *= kPrime32;
+				hash ^= (unsigned int)buffer[i];
+			}
+
+			*output = hash;
+		}
+		//
+		void fnv1a64_str(char* str, ULONG* output) {
+			if (str == nullptr) {
+				*output = kOffsetBasis64;
+				return;
+			}
+
+			unsigned long hash = kOffsetBasis64;
+			int length = strlen(str);
+
+			for (int i = 0; i < length; i++)
+			{
+				hash *= kPrime64;
+				hash ^= (unsigned long)str[i];
+			}
+
+			*output = hash;
+		}
+		void fnv1a64_byte(BYTE* buffer, int* length, ULONG* output) {
+			if (buffer == nullptr) {
+				*output = kOffsetBasis64;
+				return;
+			}
+
+			unsigned long hash = kOffsetBasis64;
+
+			for (int i = 0; i < *length; i++)
+			{
+				hash *= kPrime64;
+				hash ^= (unsigned long)buffer[i];
+			}
+
+			*output = hash;
+		}
+	}
+}

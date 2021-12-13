@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Point.Collections.Internal.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  LINK : E:\Syadeu\Unity\PointFramework\Point.Collections\Debug\Point.Collections.Native.Internal.dll not found or not built by the last incremental link; performing full link
+     Creating library E:\Syadeu\Unity\PointFramework\Point.Collections\Debug\Point.Collections.Native.Internal.lib and object E:\Syadeu\Unity\PointFramework\Point.Collections\Debug\Point.Collections.Native.Internal.exp
+  Point.Collections.Native.Internal.vcxproj -> E:\Syadeu\Unity\PointFramework\Point.Collections\Debug\Point.Collections.Native.Internal.dll

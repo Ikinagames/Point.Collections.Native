@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Globalization;
 using Unity.Mathematics;
 
 namespace Point.Collections
@@ -41,14 +42,14 @@ namespace Point.Collections
         // Creates a plane.
         public Plane(float3 inNormal, float3 inPoint)
         {
-            m_Normal = Vector3.Normalize(inNormal);
-            m_Distance = -Vector3.Dot(m_Normal, inPoint);
+            m_Normal = math.normalize(inNormal);
+            m_Distance = -math.dot(m_Normal, inPoint);
         }
 
         // Creates a plane.
         public Plane(float3 inNormal, float d)
         {
-            m_Normal = Vector3.Normalize(inNormal);
+            m_Normal = math.normalize(inNormal);
             m_Distance = d;
         }
 
@@ -60,14 +61,14 @@ namespace Point.Collections
         }
 
         // Sets a plane using a point that lies within it plus a normal to orient it (note that the normal must be a normalized vector).
-        public void SetNormalAndPosition(Vector3 inNormal, Vector3 inPoint)
+        public void SetNormalAndPosition(float3 inNormal, float3 inPoint)
         {
             m_Normal = math.normalize(inNormal);
             m_Distance = -math.dot(inNormal, inPoint);
         }
 
         // Sets a plane using three points that lie within it.  The points go around clockwise as you look down on the top surface of the plane.
-        public void Set3Points(Vector3 a, Vector3 b, Vector3 c)
+        public void Set3Points(float3 a, float3 b, float3 c)
         {
             m_Normal = math.normalize(math.cross(b - a, c - a));
             m_Distance = -math.dot(m_Normal, a);
@@ -83,7 +84,7 @@ namespace Point.Collections
         public void Translate(float3 translation) { m_Distance += math.dot(m_Normal, translation); }
 
         // Creates a plane that's translated into a given direction
-        public static Plane Translate(Plane plane, Vector3 translation) { return new Plane(plane.m_Normal, plane.m_Distance += math.dot(plane.m_Normal, translation)); }
+        public static Plane Translate(Plane plane, float3 translation) { return new Plane(plane.m_Normal, plane.m_Distance += math.dot(plane.m_Normal, translation)); }
 
         // Calculates the closest point on the plane.
         public float3 ClosestPointOnPlane(float3 point)
@@ -108,10 +109,10 @@ namespace Point.Collections
         }
 
         // Intersects a ray with the plane.
-        public bool Raycast(Ray ray, out float enter)
+        public bool Raycast(float3 origin, float3 direction, out float enter)
         {
-            float vdot = math.dot(ray.direction, m_Normal);
-            float ndot = -math.dot(ray.origin, m_Normal) - m_Distance;
+            float vdot = math.dot(direction, m_Normal);
+            float ndot = -math.dot(origin, m_Normal) - m_Distance;
 
 
             if (Approximately(vdot, 0.0f))

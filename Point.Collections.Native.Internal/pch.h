@@ -12,3 +12,5 @@
 #include "fnv1a.h"
 
 #endif //PCH_H
+
+#define WIN32_DLL_UNMANGLED_API extern "C" _declspec(dllexport)

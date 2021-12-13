@@ -13,3 +13,15 @@
 // limitations under the License.
 
 #pragma once
+
+#include "pch.h"
+
+namespace Point {
+	namespace Collections {
+		WIN32_DLL_UNMANGLED_API void fnv1a32_str(char* str, UINT* output);
+		WIN32_DLL_UNMANGLED_API void fnv1a32_byte(BYTE* buffer, int* length, UINT* output);
+
+		WIN32_DLL_UNMANGLED_API void fnv1a64_str(char* str, ULONG* output);
+		WIN32_DLL_UNMANGLED_API void fnv1a64_byte(BYTE* buffer, int* length, ULONG* output);
+	}
+}
