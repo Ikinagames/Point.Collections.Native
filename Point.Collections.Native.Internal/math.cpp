@@ -95,7 +95,7 @@ namespace Point {
             {
                 const double kMindB = -144;
 
-                if (linear == 0) *output = kMindB;
+                if (*linear == 0) *output = kMindB;
                 else {
                     *output = 20 * log10(*linear);
                 }
