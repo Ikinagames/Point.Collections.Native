@@ -36,6 +36,9 @@ namespace Point {
 			float3 mul(const float3 x, const float y);
 
 			bool contains(const aabb _aabb, const float3 position);
+
+			DLLEXPORT void unity_todB(double* linear, double* output);
+			DLLEXPORT void unity_fromdB(double* dB, double* output);
 		}
 	}
 }

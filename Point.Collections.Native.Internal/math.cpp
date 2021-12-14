@@ -17,6 +17,8 @@
 #include "aabb.h"
 #include "float.h"
 
+#include <cstdlib>
+
 namespace Point {
     namespace Collections {
         namespace Math {
@@ -88,6 +90,19 @@ namespace Point {
                     && position.x < max.x
                     && position.y < max.y
                     && position.z < max.z;
+            }
+            DLLEXPORT void unity_todB(double* linear, double* output)
+            {
+                const double kMindB = -144;
+
+                if (linear == 0) *output = kMindB;
+                else {
+                    *output = 20 * log10(*linear);
+                }
+            }
+            DLLEXPORT void unity_fromdB(double* dB, double* output)
+            {
+                *output = pow(10, *dB / 20);
             }
         }
     }
