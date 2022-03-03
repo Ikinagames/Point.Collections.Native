@@ -37,8 +37,17 @@ namespace Point {
 
 			bool contains(const aabb _aabb, const float3 position);
 
+			//////////////////////////////////////////////////////////////
+
+			DLLEXPORT bool binaryComparer(void* x, void* y, const int length);
+
+
+			//////////////////////////////////////////////////////////////
+			/*							Audio							*/
 			DLLEXPORT void unity_todB(double* linear, double* output);
 			DLLEXPORT void unity_fromdB(double* dB, double* output);
+			/*															*/
+			//////////////////////////////////////////////////////////////
 		}
 	}
 }

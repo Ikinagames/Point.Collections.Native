@@ -91,6 +91,27 @@ namespace Point {
                     && position.y < max.y
                     && position.z < max.z;
             }
+
+            //////////////////////////////////////////////////////////////
+
+            DLLEXPORT bool binaryComparer(void* x, void* y, const int length)
+            {
+                BYTE* a = CAST(BYTE, x);
+                BYTE* b = CAST(BYTE, y);
+
+                int index = 0;
+                while (index < length && a[index] == b[index])
+                {
+                    index++;
+                }
+
+                if (index != length) return false;
+                return true;
+            }
+
+            /*															*/
+            //////////////////////////////////////////////////////////////
+            /*							Audio							*/
             DLLEXPORT void unity_todB(double* linear, double* output)
             {
                 const double kMindB = -144;
@@ -104,6 +125,8 @@ namespace Point {
             {
                 *output = pow(10, *dB / 20);
             }
+            /*															*/
+            //////////////////////////////////////////////////////////////
         }
     }
 }

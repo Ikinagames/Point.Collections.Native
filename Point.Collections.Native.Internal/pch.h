@@ -17,3 +17,4 @@
 #endif //PCH_H
 
 #define DLLEXPORT extern "C" _declspec(dllexport)
+#define CAST(type, value) reinterpret_cast<type*>(value)
