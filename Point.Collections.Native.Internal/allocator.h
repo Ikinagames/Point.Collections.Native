@@ -1,4 +1,4 @@
-// Copyright 2021 Ikina Games
+// Copyright 2022 Ikina Games
 // Author : Seung Ha Kim (Syadeu)
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,6 +19,40 @@
 
 namespace Point {
 	namespace Collections {
-		DLLEXPORT void* malloc();
+		DLLEXPORT void* allocation(size_t size);
+		DLLEXPORT void dellocation(void* ptr);
+
+		//////////////////////////////////////////////////////////////
+		/*															*/
+		//////////////////////////////////////////////////////////////
+		struct MemoryChuck {
+		private:
+			MemoryChuck* next;
+
+		public:
+			MemoryChuck* GetNext();
+		};
+		//////////////////////////////////////////////////////////////
+		/*															*/
+		//////////////////////////////////////////////////////////////
+		struct MemoryBlock {
+		private:
+			MemoryBlock* next;
+
+		public:
+			MemoryBlock* GetNext();
+		};
+		//////////////////////////////////////////////////////////////
+		/*															*/
+		//////////////////////////////////////////////////////////////
+		class MemoryPool
+		{
+		private:
+			MemoryBlock current;
+
+		public:
+			MemoryPool();
+			~MemoryPool();
+		};
 	}
 }
