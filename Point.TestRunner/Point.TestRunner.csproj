@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Point.Collections.Native\Point.Collections.Native.csproj">
+      <CopyLocal>True</CopyLocal>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Point.Collections">
+      <HintPath>..\..\AudioSystem\Library\ScriptAssemblies\Point.Collections.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

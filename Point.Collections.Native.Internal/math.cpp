@@ -94,19 +94,19 @@ namespace Point {
 
             //////////////////////////////////////////////////////////////
 
-            DLLEXPORT bool binaryComparer(void* x, void* y, const int length)
+            DLLEXPORT void binaryComparer(void* x, void* y, const int length, bool* output)
             {
-                BYTE* a = CAST(BYTE, x);
-                BYTE* b = CAST(BYTE, y);
+                BYTE* a = TYPECAST(BYTE*, x);
+                BYTE* b = TYPECAST(BYTE*, y);
 
                 int index = 0;
-                while (index < length && a[index] == b[index])
+                while (index < length && *(a + index) == *(b + index))
                 {
                     index++;
                 }
 
-                if (index != length) return false;
-                return true;
+                if (index != length) *output = false;
+                *output = true;
             }
 
             /*															*/

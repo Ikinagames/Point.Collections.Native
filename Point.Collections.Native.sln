@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31424.327
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SubModules", "SubModules", "{9BFC50A7-1216-4DF0-9F3F-596989BDF2F8}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.Collections.Native", "Point.Collections.Native\Point.Collections.Native.csproj", "{B46B1889-C62D-4288-91C6-7229B3DA1428}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Point.Collections.Native.Internal", "Point.Collections.Native.Internal\Point.Collections.Native.Internal.vcxproj", "{1EE2DD39-4F0C-42B2-A4B8-3AE364004E9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.TestRunner", "Point.TestRunner\Point.TestRunner.csproj", "{E2082257-BA0E-43C8-B906-1EF4192465EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Collections", "..\AudioSystem\Assets\Point.Collections\Point.Collections.csproj", "{CFEB7E8E-0BDB-4384-BC37-B26BC12477FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,30 @@ Global
 		{1EE2DD39-4F0C-42B2-A4B8-3AE364004E9B}.Release|x64.Build.0 = Release|x64
 		{1EE2DD39-4F0C-42B2-A4B8-3AE364004E9B}.Release|x86.ActiveCfg = Release|Win32
 		{1EE2DD39-4F0C-42B2-A4B8-3AE364004E9B}.Release|x86.Build.0 = Release|Win32
+		{E2082257-BA0E-43C8-B906-1EF4192465EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2082257-BA0E-43C8-B906-1EF4192465EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2082257-BA0E-43C8-B906-1EF4192465EB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E2082257-BA0E-43C8-B906-1EF4192465EB}.Debug|x64.Build.0 = Debug|Any CPU
+		{E2082257-BA0E-43C8-B906-1EF4192465EB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E2082257-BA0E-43C8-B906-1EF4192465EB}.Debug|x86.Build.0 = Debug|Any CPU
+		{E2082257-BA0E-43C8-B906-1EF4192465EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2082257-BA0E-43C8-B906-1EF4192465EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2082257-BA0E-43C8-B906-1EF4192465EB}.Release|x64.ActiveCfg = Release|Any CPU
+		{E2082257-BA0E-43C8-B906-1EF4192465EB}.Release|x64.Build.0 = Release|Any CPU
+		{E2082257-BA0E-43C8-B906-1EF4192465EB}.Release|x86.ActiveCfg = Release|Any CPU
+		{E2082257-BA0E-43C8-B906-1EF4192465EB}.Release|x86.Build.0 = Release|Any CPU
+		{CFEB7E8E-0BDB-4384-BC37-B26BC12477FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFEB7E8E-0BDB-4384-BC37-B26BC12477FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFEB7E8E-0BDB-4384-BC37-B26BC12477FA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CFEB7E8E-0BDB-4384-BC37-B26BC12477FA}.Debug|x64.Build.0 = Debug|Any CPU
+		{CFEB7E8E-0BDB-4384-BC37-B26BC12477FA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CFEB7E8E-0BDB-4384-BC37-B26BC12477FA}.Debug|x86.Build.0 = Debug|Any CPU
+		{CFEB7E8E-0BDB-4384-BC37-B26BC12477FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFEB7E8E-0BDB-4384-BC37-B26BC12477FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFEB7E8E-0BDB-4384-BC37-B26BC12477FA}.Release|x64.ActiveCfg = Release|Any CPU
+		{CFEB7E8E-0BDB-4384-BC37-B26BC12477FA}.Release|x64.Build.0 = Release|Any CPU
+		{CFEB7E8E-0BDB-4384-BC37-B26BC12477FA}.Release|x86.ActiveCfg = Release|Any CPU
+		{CFEB7E8E-0BDB-4384-BC37-B26BC12477FA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

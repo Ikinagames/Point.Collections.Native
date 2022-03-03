@@ -39,7 +39,7 @@ namespace Point {
 
 			//////////////////////////////////////////////////////////////
 
-			DLLEXPORT bool binaryComparer(void* x, void* y, const int length);
+			DLLEXPORT void binaryComparer(void* x, void* y, const int length, bool* output);
 
 
 			//////////////////////////////////////////////////////////////
