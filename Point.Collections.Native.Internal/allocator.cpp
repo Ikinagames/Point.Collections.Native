@@ -28,3 +28,20 @@ DLLEXPORT void Point::Collections::dellocation(void* ptr)
 {
     free(ptr);
 }
+
+namespace Point {
+    namespace Collections {
+        //////////////////////////////////////////////////////////////
+        /*															*/
+        //////////////////////////////////////////////////////////////
+        MemoryChuck* MemoryChuck::GetNext() {
+            return this->next;
+        }
+        //////////////////////////////////////////////////////////////
+        /*															*/
+        //////////////////////////////////////////////////////////////
+        const int MemoryPool::GetAlignment() {
+            return 4;
+        }
+    }
+}

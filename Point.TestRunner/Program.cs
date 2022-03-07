@@ -24,8 +24,8 @@ public unsafe partial class Program
     {
         TestStruct x = new TestStruct(), y = x;
         void*
-            a = UnsafeBufferUtility.AddressOf(ref x),
-            b = UnsafeBufferUtility.AddressOf(ref y);
+            a = NativeUtility.AddressOf(ref x),
+            b = NativeUtility.AddressOf(ref y);
 
         bool result;
         NativeMath.binaryComparer(a, b, TypeHelper.SizeOf<TestStruct>(), &result);

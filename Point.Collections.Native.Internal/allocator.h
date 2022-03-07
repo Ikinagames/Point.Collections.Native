@@ -35,24 +35,20 @@ namespace Point {
 		//////////////////////////////////////////////////////////////
 		/*															*/
 		//////////////////////////////////////////////////////////////
-		struct MemoryBlock {
-		private:
-			MemoryBlock* next;
-
-		public:
-			MemoryBlock* GetNext();
-		};
-		//////////////////////////////////////////////////////////////
-		/*															*/
-		//////////////////////////////////////////////////////////////
 		class MemoryPool
 		{
 		private:
-			MemoryBlock current;
+			const int alignment; // sizePerChuck
+			MemoryChuck* current;
 
 		public:
 			MemoryPool();
 			~MemoryPool();
+
+			const int GetAlignment();
+
+			void* Allocate(const int size);
+			void Reserve(void* ptr);
 		};
 	}
 }

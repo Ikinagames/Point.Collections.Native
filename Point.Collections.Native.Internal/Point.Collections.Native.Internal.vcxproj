@@ -163,10 +163,14 @@
     <ClInclude Include="fnv1a.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="int.h" />
+    <ClInclude Include="IUnsafeReference.h" />
     <ClInclude Include="math.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="UnsafeReference.h" />
+    <ClInclude Include="UnsafeReferenceTemplate.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="allocator.cpp" />
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="float.cpp" />
