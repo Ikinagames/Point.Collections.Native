@@ -158,6 +158,7 @@
   <ItemGroup>
     <ClInclude Include="aabb.h" />
     <ClInclude Include="allocator.h" />
+    <ClInclude Include="atomicOperator.h" />
     <ClInclude Include="debug.h" />
     <ClInclude Include="float.h" />
     <ClInclude Include="fnv1a.h" />
@@ -166,11 +167,13 @@
     <ClInclude Include="IUnsafeReference.h" />
     <ClInclude Include="math.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="threadInfo.h" />
     <ClInclude Include="UnsafeReference.h" />
     <ClInclude Include="UnsafeReferenceTemplate.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="allocator.cpp" />
+    <ClCompile Include="atomicOperator.cpp" />
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="float.cpp" />
@@ -182,6 +185,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="threadInfo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

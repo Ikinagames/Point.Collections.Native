@@ -15,40 +15,58 @@
 
 #pragma once
 
+#include <memory>
+
 #include "pch.h"
+#include "threadInfo.h"
 
 namespace Point {
 	namespace Collections {
-		DLLEXPORT void* allocation(size_t size);
-		DLLEXPORT void dellocation(void* ptr);
-
 		//////////////////////////////////////////////////////////////
 		/*															*/
 		//////////////////////////////////////////////////////////////
-		struct MemoryChuck {
+		struct MemoryChunk {
 		private:
-			MemoryChuck* next;
 
 		public:
-			MemoryChuck* GetNext();
+			// https://www.tutorialspoint.com/what-is-the-size-of-a-pointer-in-c-cplusplus#:~:text=The%20size%20of%20a%20pointer%20in%20C%2FC%2B%2B%20is%20not,size%20can%20be%208%20bytes.
+			MemoryChunk* next;
+
+			//MemoryChunk(void* nextptr);
 		};
+
 		//////////////////////////////////////////////////////////////
 		/*															*/
 		//////////////////////////////////////////////////////////////
 		class MemoryPool
 		{
 		private:
-			const int alignment; // sizePerChuck
-			MemoryChuck* current;
+			void* buffer;
+			MemoryChunk* block;
 
+			size_t chunk_size;
+			size_t chunk_per_block; // Chunks per block
+
+			void move_next(_Notnull_ size_t* size _Post_satisfies_(0 < size));
 		public:
-			MemoryPool();
+			MemoryPool(
+				_In_ size_t chunk_size      _Pre_satisfies_(0 < chunk_size),
+				_In_ size_t chunk_per_block _Pre_satisfies_(0 < chunk_per_block));
 			~MemoryPool();
 
-			const int GetAlignment();
-
-			void* Allocate(const int size);
-			void Reserve(void* ptr);
+			void* allocate(_In_ size_t size _Post_satisfies_(0 < size));
+			void reserve(_In_ _Notnull_ void* ptr);
 		};
+		//////////////////////////////////////////////////////////////
+		/*															*/
+		//////////////////////////////////////////////////////////////
+		static threadInfo memorypool_owner;
+		static MemoryPool* shared_memorypool_8;
+
+		DLLEXPORT void memorypool_initialize();
+		DLLEXPORT void memorypool_uninitialize();
+
+		DLLEXPORT void* malloc(size_t size);
+		DLLEXPORT void free(void* ptr);
 	}
 }

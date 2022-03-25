@@ -23,42 +23,42 @@
 
 namespace Point {
     namespace Collections {
-        void  Debug::Log(const char* message, Color color) {
+        void  Debug::log(const char* message, Color color) {
             if (callbackInstance != nullptr)
                 callbackInstance(message, (int)color, (int)strlen(message));
         }
 
-        void  Debug::Log(const std::string message, Color color) {
+        void  Debug::log(const std::string message, Color color) {
             const char* tmsg = message.c_str();
             if (callbackInstance != nullptr)
                 callbackInstance(tmsg, (int)color, (int)strlen(tmsg));
         }
 
-        void  Debug::Log(const int message, Color color) {
+        void  Debug::log(const int message, Color color) {
             std::stringstream ss;
             ss << message;
             send_log(ss, color);
         }
 
-        void  Debug::Log(const char message, Color color) {
+        void  Debug::log(const char message, Color color) {
             std::stringstream ss;
             ss << message;
             send_log(ss, color);
         }
 
-        void  Debug::Log(const float message, Color color) {
+        void  Debug::log(const float message, Color color) {
             std::stringstream ss;
             ss << message;
             send_log(ss, color);
         }
 
-        void  Debug::Log(const double message, Color color) {
+        void  Debug::log(const double message, Color color) {
             std::stringstream ss;
             ss << message;
             send_log(ss, color);
         }
 
-        void Debug::Log(const bool message, Color color) {
+        void Debug::log(const bool message, Color color) {
             std::stringstream ss;
             if (message)
                 ss << "true";
@@ -76,11 +76,6 @@ namespace Point {
         }
         //-------------------------------------------------------------------
 
-        //Create a callback delegate
-        void RegisterDebugCallback(FuncCallBack cb) {
-            callbackInstance = cb;
-        }
-
         /* Usages
         
         Debug::Log("Hellow Red", Color::Red);
@@ -96,4 +91,9 @@ namespace Point {
 
         */
     }
+}
+
+//Create a callback delegate
+DLLEXPORT void RegisterDebugCallback(FuncCallBack cb) {
+    callbackInstance = cb;
 }

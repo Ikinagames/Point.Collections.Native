@@ -11,11 +11,7 @@
         "projectPath": "D:\\AudioSystemProject\\Point.Collections.Native\\Point.Collections.Native\\Point.Collections.Native.csproj",
         "frameworks": {
           "net48": {
-            "projectReferences": {
-              "D:\\AudioSystemProject\\Point.Collections.Native\\Unity.Mathematics\\src\\Unity.Mathematics\\Unity.Mathematics.csproj": {
-                "projectPath": "D:\\AudioSystemProject\\Point.Collections.Native\\Unity.Mathematics\\src\\Unity.Mathematics\\Unity.Mathematics.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         }
       },
@@ -83,21 +79,6 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
-      }
-    },
-    "D:\\AudioSystemProject\\Point.Collections.Native\\Unity.Mathematics\\src\\Unity.Mathematics\\Unity.Mathematics.csproj": {
-      "restore": {
-        "projectUniqueName": "D:\\AudioSystemProject\\Point.Collections.Native\\Unity.Mathematics\\src\\Unity.Mathematics\\Unity.Mathematics.csproj",
-        "projectName": "Unity.Mathematics",
-        "projectPath": "D:\\AudioSystemProject\\Point.Collections.Native\\Unity.Mathematics\\src\\Unity.Mathematics\\Unity.Mathematics.csproj",
-        "frameworks": {
-          "net471": {
-            "projectReferences": {}
-          }
-        }
-      },
-      "frameworks": {
-        "net471": {}
       }
     }
   }
