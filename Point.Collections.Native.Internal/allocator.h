@@ -50,8 +50,8 @@ namespace Point {
 			void move_next(_Notnull_ size_t* size _Post_satisfies_(0 < size));
 		public:
 			MemoryPool(
-				_In_ size_t chunk_size      _Pre_satisfies_(0 < chunk_size),
-				_In_ size_t chunk_per_block _Pre_satisfies_(0 < chunk_per_block));
+				_In_ size_t chunk_size      _Post_satisfies_(0 < chunk_size),
+				_In_ size_t chunk_per_block _Post_satisfies_(0 < chunk_per_block));
 			~MemoryPool();
 
 			void* allocate(_In_ size_t size _Post_satisfies_(0 < size));
